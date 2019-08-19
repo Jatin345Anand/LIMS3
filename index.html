@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="./JS/FileSaver.min.js"></script>
+    <script src="./JS/XlXS.min.js"></script>
+    <script src="https://kit.fontawesome.com/16f1a6d3ad.js"></script>
+    <script src="./JS/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="./CSS/custom.css">
+    <link rel="stylesheet" href="./CSS/Leftcontainer.css">
+    <script src="./JS/custom.js"></script>
+    <script src="./JS/LeftContainerOperation.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="navigation">
+                    <ul>
+                        <li>File</li>
+                        <li>View</li>
+                        <li>Tools</li>
+                    </ul>
+
+                </div>
+                <div class="homeleft">Home <i class="fas fa-chevron-down"></i></div>
+                <div class="borderline"></div>
+                <br><br>
+                <div class="homeicon"><i class="fas fa-home"></i> Home</div>
+                <div class="leftdropdowncontainer">
+                    <div class="leftDropDown" id="isshowarrowandDropdown11" >
+                        Laboratory
+                        <i class="fas fa-chevron-up" id="al11" style="display: none;"></i>
+                        <i class="fas fa-chevron-down" id="al12"></i>
+                    </div>
+                    <div  id="isshow11" style="display: none;">
+                        <div id="DD11">Labwise Summary Report</div>
+                        <div id="DD12">No of Tests Done   </div>
+                        <div id="DD13">Lab QC Indicator </div>
+                        <div id="DD14">Lab QC Indicator TAT  </div>
+                        <div id="DD15">Lab QC Indicator TAT per Lab</div>
+                        <div id="DD16">LabWise Performance Indicator</div>
+                        <div id="DD17">	Labwise CBNAAT Monthly Report </div>
+                        <div id="DD18">Labwise Referral Indicator</div>
+                    </div>
+                    <div class="leftDropDown" id="isshowarrowandDropdown12">
+                        Equipment
+                        <i class="fas fa-chevron-up" id="al21" style="display: none;"></i>
+                        <i class="fas fa-chevron-down" id="al22"></i>
+                    </div>
+                    <div  id="isshow12" style="display: none;">
+                            <div id="DD21">Sitewise Equipment Calibration Status</div>
+                            <div id="DD22">Sitewise Equipment Maintenance Status</div>
+                            <div id="DD23">Sitewise Functionality Status </div>
+                            <div id="DD24">Sitewise Non-Functional Status</div>
+                            <div id="DD25">Analysis of Breakdown Service Performance</div>
+                            
+                        </div>
+                    <div class="leftDropDown" id="isshowarrowandDropdown13">
+                        Human Resources
+                        <i class="fas fa-chevron-up" id="al31" style="display: none;"></i>
+                        <i class="fas fa-chevron-down" id="al32"></i>
+                    </div>
+                    <div  id="isshow13" style="display: none;">
+                            <div id="DD31">Recruitment Report</div>
+                          
+                        </div>
+                    <div class="leftDropDown" id="isshowarrowandDropdown14">
+                        Logistics
+                        <i class="fas fa-chevron-up" id="al41" style="display: none;"></i>
+                        <i class="fas fa-chevron-down" id="al42"></i>
+                    </div>
+                    <div  id="isshow14" style="display: none;">
+                       
+                        </div>
+
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-2 showbtn">Show All</div>
+                    <div class="col-md-7"></div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2 showbtn" id="search">Show</div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-md-1">
+                    <div id="rectd" style="display: none;">
+                            <!-- Lorem ipsum dolor -->
+                            <!-- rolod muspi meroL   -->
+                    </div>     
+                    </div>
+                    <div class="col-md-10">
+                        <div class="row rightbuttons" >
+                            <div class="col-md-2 selectbutton" id="isshowarrowandDropdown1">
+                                Select Year
+
+
+                                <i class="fas fa-chevron-up" id="ar11" style="display: none;"></i>
+                                <i class="fas fa-chevron-down" id="ar12"></i>
+
+                            </div>
+                            <div class="col-md-2 selectbutton" id="isshowarrowandDropdown2">
+                                Select Qtr
+                                <i class="fas fa-chevron-up" id="ar21" style="display: none;"></i>
+                                <i class="fas fa-chevron-down" id="ar22"></i>
+                            </div>
+                            <div class="col-md-2 selectbutton" id="isshowarrowandDropdown3">
+                                Select Mon
+                                <i class="fas fa-chevron-up" id="ar31" style="display: none;"></i>
+                                <i class="fas fa-chevron-down" id="ar32"></i>
+
+                            </div>
+                            <div class="col-md-2 selectbutton" id="isshowarrowandDropdown4">
+                                Select NRL
+                                <i class="fas fa-chevron-up" id="ar41" style="display: none;"></i>
+                                <i class="fas fa-chevron-down" id="ar42"></i>
+                            </div>
+                            <div class="col-md-2 selectbutton" id="isshowarrowandDropdown5">
+                                Select State
+                                <i class="fas fa-chevron-up" id="ar51" style="display: none;"></i>
+                                <i class="fas fa-chevron-down" id="ar52"></i>
+                            </div>
+                            <div class="col-md-2 selectbutton" id="isshowarrowandDropdown6">
+                                Select Lab
+                                <i class="fas fa-chevron-up" id="ar61" style="display: none;"></i>
+                                <i class="fas fa-chevron-down" id="ar62"></i>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div id="span1" style="display: none;"></div>
+                                <div id="d1" style="display: none;">
+                                    <div id="ramevent1" class="row">
+
+                                        <div class="col-sm-2">
+                                            <input type="checkbox" class="inputRAM1" id="ddi11" value="off">
+
+                                        </div>
+                                        <div class=" col-sm-10 headingfiler" id="dd11">
+                                            <div class="rangeRAM" id="ddv11">Year</div>
+                                        </div>
+                                    </div>
+                                    <div id="ramevent1" class="row">
+
+                                        <div class="col-sm-2">
+                                            <input type="checkbox" class="inputRAM" id="ddi12" value="on">
+
+                                        </div>
+                                        <div class=" col-sm-10 headingfiler" id="dd12">
+                                            <div class="rangeRAM" id="ddv12"> 2018 </div>
+                                        </div>
+                                    </div>
+                                    <div id="ramevent1" class="row">
+
+                                        <div class="col-sm-2">
+                                            <input type="checkbox" class="inputRAM" id="ddi13" value="on">
+
+                                        </div>
+                                        <div class=" col-sm-10 headingfiler" id="dd13">
+                                            <div class="rangeRAM" id="ddv13"> 2019 </div>
+                                        </div>
+                                    </div>
+                                 
+
+
+                                </div>
+                            </div>
+                            <div class="col-md-2 ">
+                                <div id="span2" style="display: none;"></div>
+                                <div id="d2" style="display: none;">
+                                        <div id="ramevent1" class="row">
+
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM1" id="ddi21" value="off">
+        
+                                                </div>
+                                                <div class="col-sm-10 headingfiler" id="dd21">
+                                                    <div class="rangeRAM" id="ddv21"> Qtr </div>
+                                                </div>
+                                            </div>
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi22" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd22">
+                                                    <div class="rangeRAM" id="ddv22"> Qtr 1 </div>
+                                                </div>
+                                            </div>
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi23" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd23">
+                                                    <div class="rangeRAM" id="ddv23"> Qtr 2 </div>
+                                                </div>
+                                            </div>
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi24" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd24">
+                                                    <div class="rangeRAM" id="ddv24"> Qtr 3 </div>
+                                                </div>
+                                            </div>
+        
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi25" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd25">
+                                                    <div class="rangeRAM" id="ddv25"> Qtr 4 </div>
+                                                </div>
+                                            </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div id="span3" style="display: none;"></div>
+                                <div id="d3" style="display: none;">
+                                        <div id="ramevent1" class="row">
+
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM1" id="ddi31" value="off">
+        
+                                                </div>
+                                                <div class="col-sm-10 headingfiler" id="dd31">
+                                                    <div class="rangeRAM" id="ddv31"> Months </div>
+                                                </div>
+                                            </div>
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi32" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd32">
+                                                    <div class="rangeRAM" id="ddv32"> March </div>
+                                                </div>
+                                            </div>
+        
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi33" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd33">
+                                                    <div class="rangeRAM" id="ddv33"> April </div>
+                                                </div>
+                                            </div>
+
+
+                                  
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div id="span4" style="display: none;"></div>
+                                <div id="d4" style="display: none;">
+                                        <div id="ramevent1" class="row">
+
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM1" id="ddi41" value="off">
+        
+                                                </div>
+                                                <div class="col-sm-10 headingfiler" id="dd41">
+                                                    <div class="rangeRAM" id="ddv41"> All NRLs </div>
+                                                </div>
+                                            </div>
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi42" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd42">
+                                                    <div class="rangeRAM" id="ddv42"> NIRT Chennai</div>
+                                                </div>
+                                            </div>
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi43" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd43">
+                                                    <div class="rangeRAM" id="ddv43"> NITRD Delhi</div>
+                                                </div>
+                                            </div>
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi44" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd44">
+                                                    <div class="rangeRAM" id="ddv44"> NTI BLR </div>
+                                                </div>
+                                            </div>
+
+                                     
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div id="span5" style="display: none;"></div>
+                                <div id="d5" style="display: none;">
+                                        <div id="ramevent1" class="row">
+
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM1" id="ddi51" value="off">
+        
+                                                </div>
+                                                <div class="col-sm-10 headingfiler" id="dd51">
+                                                    <div class="rangeRAM" id="ddv51"> States </div>
+                                                </div>
+                                            </div>
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi52" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd52">
+                                                    <div class="rangeRAM" id="ddv52"> Karnataka </div>
+                                                </div>
+                                            </div>
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi53" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd53">
+                                                    <div class="rangeRAM" id="ddv53"> Maharashtra</div>
+                                                </div>
+                                            </div>
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi54" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd54">
+                                                    <div class="rangeRAM" id="ddv54"> Rajasthan </div>
+                                                </div>
+                                            </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div id="span6" style="display: none;"></div>
+                                <div id="d6" style="display: none;">
+                                     
+                                        <div id="ramevent1" class="row">
+
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM1" id="ddi61" value="off">
+        
+                                                </div>
+                                                <div class="col-sm-10 headingfiler" id="dd61">
+                                                    <div class="rangeRAM" id="ddv61"> All Labs </div>
+                                                </div>
+                                            </div>
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi62" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd62">
+                                                    <div class="rangeRAM" id="ddv62"> NTT Bangalore </div>
+                                                </div>
+                                            </div>
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi63" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd63">
+                                                    <div class="rangeRAM" id="ddv63"> STDC Bangalore</div>
+                                                </div>
+                                            </div>
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi64" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd64">
+                                                    <div class="rangeRAM" id="ddv64"> KIMS Hubli </div>
+                                                </div>
+                                            </div>
+        
+                                            <div id="ramevent1" class="row">
+        
+                                                <div class="col-sm-2">
+                                                    <input type="checkbox" class="inputRAM" id="ddi65" value="on">
+        
+                                                </div>
+                                                <div class=" col-sm-10 headingfiler" id="dd65">
+                                                    <div class="rangeRAM" id="ddv65"> RIMS Raichur </div>
+                                                </div>
+                                            </div>
+
+ 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="showentry" class="col-md-10" style="display: none;">
+                                Show
+                                <select id="selent" name="selent" class="browser-default">
+                                    <option value="0" disabled selected name='selectentries'>10</option>
+                                    <option value="1" name='25'>25</option>
+                                    <option value="2" name='50'>50</option>
+                                    <option value="3" name='100'>100</option>
+                                </select>
+                                Entries
+                            </div>
+                            <div id="files" class="col-md-2" style="display: none;">
+                                <div id="fS">File Saved</div>
+
+                            </div>
+                        </div>
+
+                        <div id="firstTable" style="display: none;">
+                            <div>Search : <input type="text" name="" id="" placeholder="SEARCH"></div>
+                            <table class="table table-striped" id="FT">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div>Showing 1 to 1 of 1 entries</div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-1">
+                        <i class="far fa-file-excel" id="XLS"></i>
+                        <br>
+                        <i class="far fa-file-pdf" id="PDF"></i>
+                    </div>
+
+                </div>
+                <div id="showentry" style="display: none;">
+                    Show
+                    <select id="selent" name="selent" class="browser-default">
+                        <option value="0" disabled selected name='selectentries'>10</option>
+                        <option value="1" name='25'>25</option>
+                        <option value="2" name='50'>50</option>
+                        <option value="3" name='100'>100</option>
+                    </select>
+                    Entries
+                </div>
+
+                <div id="SecondTable" style="display: none;">
+                    <div id="showentry2">
+                        Show
+                        <select id="selent" name="selent" class="browser-default">
+                            <option value="0" disabled selected name='selectentries'>10</option>
+                            <option value="1" name='25'>25</option>
+                            <option value="2" name='50'>50</option>
+                            <option value="3" name='100'>100</option>
+                        </select>
+                        Entries
+                    </div>
+                    <div>Search : <input type="text" placeholder="Search"></div>
+
+
+                    <div>
+                        <table class="table table-striped" id="ST">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">Showing 1 to 1 of 1 entries</div>
+                        <div class="col-md-6">Prvious <button>1</button> Next</div>
+                    </div>
+                </div>
+
+                <script src="./JS/FileDownloads.js"></script>
+            </div>
+           </div>
+           <!-- <div class="samplesummaryRect">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum repellat sed deleniti fugit, optio consequatur? Accusamus laborum, maxime sunt explicabo, dignissimos nobis quos, magnam beatae reprehenderit quasi hic numquam corrupti!</div> -->
+      
+    </div>
+
+</body>
+
+</html>

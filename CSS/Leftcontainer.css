@@ -1,0 +1,126 @@
+.col-md-3 {
+  padding-top: 10px;
+}
+#rectd {
+  margin-top: 360%;
+  background: lightgoldenrodyellow;
+  height: 310px;
+  width: 30px;
+  writing-mode: vertical-lr;
+  text-align: center;
+  font-size: small;
+  border: 1px solid green;
+}
+ul li {
+  padding: 20px;
+  display: inline;
+}
+.homeleft {
+  font-size: xx-large;
+  padding-left: 57px;
+  /* border-bottom: 1px solid black; */
+}
+.borderline {
+  margin-left: 15px;
+  padding-top: 10px;
+  border-bottom: 1px solid black;
+}
+.homeicon {
+  text-align: center;
+  font-size: x-large;
+}
+.samplesummaryRect {
+  background-color: aquamarine;
+  /* background-color: mediumseagreen; */
+  /* background: lightyellow; */
+  /* background: lemonchiffon; */
+  /* background: khaki; */
+  /* background: darkseagreen; */
+  /* background: blanchedalmond; */
+  /* backface-visibility: visible; */
+  /* background: aquamarine; */
+  /* height: 30px; */
+}
+.rightbuttons {
+  /* background: yellowgreen; */
+}
+.leftdropdowncontainer {
+  margin-left: 15px;
+  margin-top: 10px;
+  /* background: darkturquoise; */
+  /* background: lightgrey; */
+  /* background: azure; */
+  background: whitesmoke;
+  /* border: 1px solid black; */
+}
+#al31,
+#al32 {
+  padding-left: 52px;
+}
+#al41,
+#al42 {
+  padding-left: 131px;
+}
+.leftDropDown i {
+  padding-left: 115px;
+}
+
+.leftDropDown {
+  cursor: pointer;
+  padding: 20px;
+  font-size: large;
+  border: 1px solid black;
+}
+#isshow11 {
+  /* padding: 5px; */
+  cursor: pointer;
+  font-size: large;
+  border: 1px solid black;
+}
+#DD11,
+#DD12,
+#DD13,
+#DD14,
+#DD15,
+#DD16,
+#DD17,
+#DD18 {
+  padding-left: 20px;
+  font-size: smaller;
+  border-bottom: 1px solid black;
+}
+#isshow12 {
+  /* padding: 5px; */
+  font-size: large;
+  cursor: pointer;
+  border: 1px solid black;
+}
+#DD21,
+#DD22,
+#DD23,
+#DD24,
+#DD25 {
+  padding-left: 20px;
+  font-size: smaller;
+  border-bottom: 1px solid black;
+}
+#isshow13 {
+  /* padding: 5px; */
+  cursor: pointer;
+  font-size: large;
+  border: 1px solid black;
+}
+#DD31 {
+  padding-left: 20px;
+  font-size: smaller;
+  border-bottom: 1px solid black;
+}
+#isshow14 {
+  /* padding: 5px; */
+  cursor: pointer;
+  font-size: large;
+  border: 1px solid black;
+}
+#DD41 {
+  border-bottom: 1px solid black;
+}
